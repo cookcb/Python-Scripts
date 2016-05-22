@@ -12,4 +12,4 @@ for digit in str(value):
 	count += 1	
 	
 
-print length
+print total
