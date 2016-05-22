@@ -15,9 +15,12 @@ def convert(value, response):
 				total = total + (2**count)
 			count += 1	
 	else:
+		total = ''
+		#While loop to get the highest base that the value can go into
 		while (value > 2**count):
 			count +=1
-		print count
+		for place in range(count, 0, -1):
+
 	return total;
 
 
