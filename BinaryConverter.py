@@ -3,6 +3,10 @@
 #Still currently being worked on
 
 value = input('Enter the binary value that you would like to convert to a whole number: ')
-length = len(str(value))
+
+count = 0
+for digit in str(value):
+	if digit == '1'
+	
 
 print length
