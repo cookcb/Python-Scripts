@@ -19,8 +19,14 @@ def convert(value, response):
 		#While loop to get the highest base that the value can go into
 		while (value > 2**count):
 			count +=1
+		#for loop that counts backwards from the count value
 		for place in range(count, 0, -1):
-
+			if value > 2**place:
+				total = '1' + total
+				#To calculate the newly created value
+				value = value - 2**place
+			else:
+				total = '0' + total
 	return total;
 
 
