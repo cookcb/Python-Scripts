@@ -21,12 +21,12 @@ def convert(value, response):
 			count +=1
 		#for loop that counts backwards from the count value
 		for place in range(count, 0, -1):
-			if value > 2**place:
-				total = '1' + total
+			if value >= 2**(place-1):
+				total = total + '1'
 				#To calculate the newly created value
-				value = value - 2**place
+				value = value - 2**(place-1)
 			else:
-				total = '0' + total
+				total = total + '0'
 	return total;
 
 
