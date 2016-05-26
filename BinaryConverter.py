@@ -1,10 +1,20 @@
 #READ ME
 #This is a Python Script that will convert a given  decimal number to Binary and vice versa
 #Still currently being worked on
+from Tkinter import *
+import Tkinter
 
-response = raw_input('Type "one" for binary -> whole number and "two" for whole number -> binary: ')
+top = Tkinter.Tk()
+v = IntVar()
+B1 = Radiobutton(top, text = "Decimal to Binary", variable = v, value = 1, indicatoron = 0)
+B1.pack(anchor = NE)
+B2 = Radiobutton(top, text = "Binary to Decimal", variable = v, value = 2, indicatoron = 0)
+B2.pack(anchor = NE)
+top.mainloop()
 
-value = input('Enter the value that you would like to convert: ')
+#response = raw_input('Type "one" for binary -> whole number and "two" for whole number -> binary: ')
+
+#value = input('Enter the value that you would like to convert: ')
 
 def convert(value, response):
 	count = 0
