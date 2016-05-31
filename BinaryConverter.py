@@ -10,8 +10,11 @@ B1 = Radiobutton(top, text = "Decimal to Binary", variable = v, value = 1, indic
 B1.pack(anchor = E)
 B2 = Radiobutton(top, text = "Binary to Decimal", variable = v, value = 2, indicatoron = 0)
 B2.pack(anchor = W)
+label = Label(top, text = "Decimal/Binary Value")
+label.pack(side = LEFT)
 EntryField = Entry(top)
 EntryField.pack(side = RIGHT)
+
 top.mainloop()
 
 #response = raw_input('Type "one" for binary -> whole number and "two" for whole number -> binary: ')
