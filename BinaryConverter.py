@@ -6,14 +6,14 @@ import Tkinter
 
 top = Tkinter.Tk()
 v = IntVar()
-B1 = Radiobutton(top, text = "Decimal to Binary", variable = v, value = 1, indicatoron = 0)
-B1.pack(anchor = NE, side = LEFT)
-B2 = Radiobutton(top, text = "Binary to Decimal", variable = v, value = 2, indicatoron = 0)
-B2.pack(anchor = NW, side = RIGHT)
-label = Label(top, text = "Decimal/Binary Value")
-label.pack(side = LEFT)
-EntryField = Entry(top)
-EntryField.pack(side = RIGHT)
+B1 = Radiobutton(top, text = "Decimal to Binary", variable = v, value = 1, indicatoron = 0).grid(row = 0, column = 0)
+
+B2 = Radiobutton(top, text = "Binary to Decimal", variable = v, value = 2, indicatoron = 0).grid(row = 0, column = 1)
+
+label = Label(top, text = "Decimal/Binary Value").grid(row = 1, column = 0)
+
+EntryField = Entry(top).grid(row = 1, column = 1)
+
 
 top.mainloop()
 
