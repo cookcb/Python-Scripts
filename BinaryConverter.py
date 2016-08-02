@@ -33,7 +33,7 @@ B1 = Radiobutton(top, text = "Decimal to Binary", variable = v, value = 1, indic
 
 B2 = Radiobutton(top, text = "Binary to Decimal", variable = v, value = 2, indicatoron = 0).grid(row = 0, column = 1)
 
-#EntryField = Entry(top).grid(row = 1, column = 1)
+EntryField = Entry(top).grid(row = 1, column = 1)
 
 Convert = Button(top, text = "Convert", command = lambda:convert(10, v.get())).grid(row = 2, columnspan = 2)
 label = Label(top, text = "Decimal/Binary Value").grid(row = 1, column = 0)
@@ -41,7 +41,4 @@ label = Label(top, text = "Decimal/Binary Value").grid(row = 1, column = 0)
 
 top.mainloop()
 
-#response = raw_input('Type "one" for binary -> whole number and "two" for whole number -> binary: ')
-
-#value = input('Enter the value that you would like to convert: ')
-
+#Test
