@@ -35,10 +35,9 @@ B2 = Radiobutton(top, text = "Binary to Decimal", variable = v, value = 2, indic
 
 EntryField = Entry(top).grid(row = 1, column = 1)
 
-Convert = Button(top, text = "Convert", command = lambda:convert(10, v.get())).grid(row = 2, columnspan = 2)
+Convert = Button(top, text = "Convert", command = lambda:convert(EntryField.get(), v.get())).grid(row = 2, columnspan = 2)
 label = Label(top, text = "Decimal/Binary Value").grid(row = 1, column = 0)
 
 
 top.mainloop()
 
-#Test
