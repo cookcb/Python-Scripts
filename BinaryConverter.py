@@ -45,4 +45,3 @@ top.mainloop()
 
 #value = input('Enter the value that you would like to convert: ')
 
-#print convert(value, response)
