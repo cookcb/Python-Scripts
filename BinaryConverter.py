@@ -7,7 +7,9 @@ from Tkinter import *
 def convert(value, response):
 	count = 0
 	total = 0
-	if response == 1:
+	if value == "":
+		total = "No Entry"
+	elif response == 1:
 		for digit in str(value):
 			if digit == '1':
 				total = total + (2**count)
@@ -35,7 +37,6 @@ B2 = Radiobutton(top, text = "Binary to Decimal", variable = v, value = 2, indic
 
 EntryField = Entry(top)
 EntryField.grid(row = 1, column = 1)
-
 
 
 Convert = Button(top, text = "Convert", command = lambda:convert(EntryField.get(), v.get())).grid(row = 2, columnspan = 2)
