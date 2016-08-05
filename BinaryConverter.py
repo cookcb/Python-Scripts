@@ -2,7 +2,7 @@
 #This is a Python Script that will convert a given  decimal number to Binary and vice versa
 #Still currently being worked on
 from Tkinter import *
-import Tkinter
+
 
 def convert(value, response):
 	count = 0
@@ -27,17 +27,19 @@ def convert(value, response):
 				total = total + '0'
 	print total;
 
-top = Tkinter.Tk()
+top = Tk()
 v = IntVar()
 B1 = Radiobutton(top, text = "Decimal to Binary", variable = v, value = 1, indicatoron = 0).grid(row = 0, column = 0)
 
 B2 = Radiobutton(top, text = "Binary to Decimal", variable = v, value = 2, indicatoron = 0).grid(row = 0, column = 1)
 
-EntryField = Entry(top).grid(row = 1, column = 1)
+EntryField = Entry(top)
+EntryField.grid(row = 1, column = 1)
+
+
 
 Convert = Button(top, text = "Convert", command = lambda:convert(EntryField.get(), v.get())).grid(row = 2, columnspan = 2)
 label = Label(top, text = "Decimal/Binary Value").grid(row = 1, column = 0)
-
 
 top.mainloop()
 
