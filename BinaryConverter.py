@@ -3,7 +3,7 @@
 #Still currently being worked on
 from Tkinter import *
 
-class BinaryConverter():
+class BinaryConverter(root):
 	def convert(value, response):
 		count = 0
 		total = 0
@@ -29,7 +29,7 @@ class BinaryConverter():
 					total = total + '0'
 		print total;
 
-	top = Tk()
+#	top = Tk()
 	v = IntVar()
 	B1 = Radiobutton(top, text = "Decimal to Binary", variable = v, value = 1, indicatoron = 0).grid(row = 0, column = 0)
 
@@ -43,7 +43,8 @@ class BinaryConverter():
 	label = Label(top, text = "Decimal/Binary Value").grid(row = 1, column = 0)
 	Result = Label(top, text = "Result:").grid(row = 3, column = 0)
 
-	top.mainloop()
+top = Tk()
 
+top.mainloop()
 
 
