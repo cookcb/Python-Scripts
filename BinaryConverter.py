@@ -31,19 +31,19 @@ class BinaryConverter(tk.Frame):
 
 	top = tk.Tk()
 	v = tk.IntVar()
-	B1 = tk.Radiobutton(tk.Frame, text = "Decimal to Binary", variable = v, value = 1, indicatoron = 0).grid(row = 0, column = 0)
+	B1 = tk.Radiobutton(top, text = "Decimal to Binary", variable = v, value = 1, indicatoron = 0).grid(row = 0, column = 0)
 
-	B2 = tk.Radiobutton(tk.Frame, text = "Binary to Decimal", variable = v, value = 2, indicatoron = 0).grid(row = 0, column = 1)
+	B2 = tk.Radiobutton(top, text = "Binary to Decimal", variable = v, value = 2, indicatoron = 0).grid(row = 0, column = 1)
 
-	EntryField = tk.Entry(tk.Frame)
+	EntryField = tk.Entry(top)
 	EntryField.grid(row = 1, column = 1)
 
 
-	Convert = Button(tk.Frame, text = "Convert", command = lambda:convert(EntryField.get(), v.get())).grid(row = 2, columnspan = 2)
-	label = Label(tk.Frame, text = "Decimal/Binary Value").grid(row = 1, column = 0)
-	Result = Label(tk.Frame, text = "Result:").grid(row = 3, column = 0)
+	Convert = tk.Button(top, text = "Convert", command = lambda:convert(EntryField.get(), v.get())).grid(row = 2, columnspan = 2)
+	label = tk.Label(top, text = "Decimal/Binary Value").grid(row = 1, column = 0)
+	Result = tk.Label(top, text = "Result:").grid(row = 3, column = 0)
 
-top = Tk()
+top = tk.Tk()
 BinaryConverter(top);
 top.mainloop()
 
